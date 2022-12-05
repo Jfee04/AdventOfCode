@@ -9,19 +9,23 @@ public class D1Q1 {
                 int maxNum = 0;
                 int cur = 0;
                 int number = 0;
-                while(in.hasNext()){
-                        number++;
-                        double temp = in.nextInt();
-                        if(!in.hasNextInt()){
+                int line = 0;
+                while(in.hasNextLine()){
+                        line++;
+                        String temp = "0" + in.nextLine();
+                        double tempNum = Integer.parseInt(temp);
+                        if(tempNum == 0){
+                                number++;
                                 if(cur > max) {
                                         max = cur;
                                         maxNum = number;
                                 }
                                 cur = 0;
                         } else {
-                                cur += temp;
+                                cur += tempNum;
                         }
                 }
-                System.out.println(maxNum);
+                System.out.println(max);
+
         }
 }
