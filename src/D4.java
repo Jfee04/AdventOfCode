@@ -20,9 +20,15 @@ public class D4 {
 //            System.out.println(aEnd);
             int bStart = Integer.parseInt(b.substring(0,b.indexOf('-')));
             int bEnd = Integer.parseInt(b.substring(b.indexOf('-') + 1));
-            if(aStart <= bStart && aEnd >= bEnd)
+            //Part 1
+//            if(aStart <= bStart && aEnd >= bEnd)
+//                num++;
+//            else if(bStart <= aStart && bEnd >= aEnd)
+//                num++;
+            //part 2
+            if(aStart <= bStart && aEnd >= bStart)
                 num++;
-            if(bStart <= aStart && bEnd >= aEnd)
+            else if(bStart <= aStart && bEnd >= aStart)
                 num++;
         }
         System.out.println(num);
