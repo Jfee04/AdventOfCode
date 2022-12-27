@@ -53,6 +53,7 @@ public class D5 {
         instructions[1] = Integer.parseInt(line.substring(12,14));
         instructions[2] = Integer.parseInt(line.substring(17));
         return instructions;
+
     }
 
 }
